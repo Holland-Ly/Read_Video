@@ -15,6 +15,8 @@ const FileItem = ({
   handleDelete,
   isPaused,
 }) => {
+  const collapseId = `collapse-${fileName.replace(/[^a-zA-Z0-9]/g, "-")}`;
+
   return (
     <div className="file-item">
       <div className="file-header w-100 row gx-0 ">
@@ -38,17 +40,17 @@ const FileItem = ({
           />
         </div>
         <button
-          className="btn col-1"
+          className="btn col-1 collapse-button "
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target={`#collapse${fileName}`}
+          data-bs-target={`#${collapseId}`}
           aria-expanded="false"
-          aria-controls={`collapse${fileName}`}
+          aria-controls={collapseId}
         >
           <i className="bi bi-caret-down-fill"></i>
         </button>
       </div>
-      <div id={`collapse${fileName}`} className="collapse">
+      <div id={collapseId} className="collapse">
         <div className="video-preview">
           <ReactPlayer
             className="video-preview"

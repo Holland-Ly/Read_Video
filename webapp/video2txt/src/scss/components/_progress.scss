@@ -1,0 +1,28 @@
+@import "../variables";
+
+.progress-container {
+  width: 100%;
+  height: 20px;
+  background-color: $midnight-navy;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+
+  .progress-bar {
+    height: 100%;
+    background-color: $aqualake;
+    transition: width 0.3s ease;
+  }
+
+  .progress-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $delicatewhite;
+    font-size: 0.9em;
+    white-space: nowrap;
+
+    z-index: 1;
+  }
+}

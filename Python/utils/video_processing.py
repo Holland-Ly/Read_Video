@@ -128,11 +128,13 @@ def process_video_with_progress(path, task_id, progress_status, paused_tasks):
                     current_progress = 30 + (progress['chunk'] / progress['total'] * 60)
                     progress_status[task_id].update({
                         'percent': int(current_progress),
-                        'message': f'Transcribing chunk {progress["chunk"]} of {progress["total"]}...'
+                        #'message': f'Transcribing chunk {progress["chunk"]} of {progress["total"]}...'
+                        'message': f'Transcribing chunk ...'
                     })
                 elif progress['type'] == 'text':
                     progress_status[task_id].update({
-                        'message': f'Transcribed chunk {progress["chunk"]}: {progress["text"][:30]}...'
+                       # 'message': f'Transcribed chunk {progress["chunk"]}: {progress["text"][:30]}...'
+                       'message': f'Transcribed chunk ...'
                     })
                 elif progress['type'] == 'complete':
                     transcription = progress['transcription']

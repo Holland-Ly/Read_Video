@@ -1,0 +1,23 @@
+@import "../variables";
+
+.drop-zone {
+  border: 2px dashed $aqualake;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  margin: $spacing-md 0;
+  cursor: pointer;
+  transition: $transition-default;
+  background-color: $delicatewhite;
+  width: 80%;
+
+  &.dragging {
+    border-color: $midnight-navy;
+    background-color: $dewhaze;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.1em;
+    color: $aqualake;
+  }
+}

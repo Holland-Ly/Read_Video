@@ -1,0 +1,71 @@
+@import "../variables";
+
+.file-list {
+  margin-top: $spacing-md;
+  margin-bottom: $spacing-md;
+  padding-bottom: $spacing-md;
+}
+
+.file-item {
+  margin-bottom: $spacing-md;
+  padding: $spacing-sm;
+  border: 1px solid $aqualake;
+  border-radius: $border-radius-lg;
+  background-color: $delicatewhite;
+  font-family: "Poppins-medium";
+  color: $midnight-navy;
+}
+
+.file-header {
+  display: inline;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  display: inline-block;
+}
+
+.action-buttons {
+  button {
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+    color: $midnight-navy;
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    .bi-trash {
+      color: $danger;
+    }
+    .bi-play-fill {
+      &:hover {
+        color: $success;
+      }
+    }
+    .bi-pause-fill {
+      &:hover {
+        color: $gray;
+      }
+    }
+  }
+}
+.collapse-button {
+  border: none !important;
+  color: $aqualake !important;
+  i {
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  &[aria-expanded="true"] {
+    i {
+      transform: rotate(90deg) !important;
+    }
+  }
+}

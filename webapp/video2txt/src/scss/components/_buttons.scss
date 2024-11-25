@@ -1,0 +1,30 @@
+@import "../variables";
+
+.upload-button,
+.download-button,
+.submit-button {
+  padding: $spacing-sm $spacing-md;
+  background-color: $primary;
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: $transition-default;
+
+  &:disabled {
+    background-color: $gray;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $primary-dark;
+  }
+}
+
+.download-button {
+  background-color: $success;
+
+  &:hover {
+    background-color: $success-dark;
+  }
+}

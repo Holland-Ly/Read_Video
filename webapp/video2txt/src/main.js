@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./main.scss";
+import "./scss/main.scss";
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -197,16 +197,22 @@ function Main() {
   };
 
   return (
-    <div className="container">
-      <h1>Video to Text Converter</h1>
+    <div className="container-fluid text-center background">
+      <h1>Read Video</h1>
+
       <div
-        className={`drop-zone ${isDragging ? "dragging" : ""}`}
+        className={`drop-zone mx-auto ${isDragging ? "dragging" : ""}`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDropWrapper}
         onClick={() => fileInputRef.current.click()}
       >
         <p>Drag and drop video files here, or click to select</p>
+        <p>Upload your video files and we will transcribe the video for you.</p>
+        <p>
+          You can also get the audio from the video and have a chance to edit
+          the caption file before downloading.
+        </p>
         <input
           type="file"
           ref={fileInputRef}

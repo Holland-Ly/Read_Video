@@ -1,0 +1,48 @@
+@import "../variables";
+
+.video-preview {
+  margin: $spacing-md 0;
+  width: 100%;
+  max-width: 100%;
+  border-radius: $border-radius;
+  overflow: hidden;
+  background-color: black;
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  .react-player {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    background-color: black;
+  }
+}
+
+.video-controls {
+  margin-top: $spacing-sm;
+  display: flex;
+  gap: $spacing-sm;
+  justify-content: center;
+
+  button {
+    padding: $spacing-sm;
+    border: none;
+    border-radius: $border-radius;
+    background-color: $primary;
+    color: white;
+    cursor: pointer;
+    transition: $transition-default;
+
+    &:hover {
+      background-color: $primary-dark;
+    }
+
+    &:disabled {
+      background-color: $gray;
+      cursor: not-allowed;
+    }
+  }
+}

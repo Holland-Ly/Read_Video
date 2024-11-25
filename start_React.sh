@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/"
 # Navigate to the React app directory
 cd "webapp/video2txt"
 
