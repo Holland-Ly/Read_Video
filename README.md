@@ -1,90 +1,119 @@
-# Speech2txt
+# Video2Text - Video Transcription Web Application
 
-A web application that transcribes video files into text using speech recognition. Upload videos through a user-friendly interface and get transcribed captions in SRT format.
+## Overview
+
+Video2Text is a modern web application that converts video content into text transcriptions. Built with React and Flask, it offers a user-friendly interface for uploading videos and receiving accurate transcriptions powered by OpenAI's Whisper model.
+
+Currently supports English only.
 
 ## Features
 
-- Web-based interface for easy video upload
-- Supports multiple video formats (mp4, avi, mov, mkv, flv, wmv, webm)
-- Real-time progress tracking during transcription
-- Downloads captions in SRT format
-- Docker support for easy deployment
+- 🎥 Drag-and-drop video upload interface
+- ⏳ Real-time transcription progress monitoring
+- ⏯️ Pause/Resume transcription tasks
+- 📝 Edit captions before downloading
+- 🎧 Audio extraction
+- 🎨 Clean, modern UI with responsive design
 
-## Prerequisites
+## Tech Stack
 
-- Docker and Docker Compose
-- Git
+- Frontend: React.js with SCSS
+- Backend: Flask (Python)
+- Speech Recognition: OpenAI Whisper
+- Video Processing: MoviePy, FFmpeg
+- Styling: Bootstrap 5
 
-## Quick Start
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- Python 3.8+
+- FFmpeg
+
+### Installation
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/speech2txt.git
-cd speech2txt
-
+git clone https://github.com/yourusername/video2text.git
+cd video2text
 ```
 
-3. Access the web interface at: http://localhost:3000
+2. Set up the backend:
 
-## Manual Installation
-
-If you prefer to run without Docker:
-
-1. Set up the Python backend:
-
-```bash
+```
+bash
 cd Python
-python -m venv venv
-source venv/bin/activate # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
+python main.py
 ```
 
-2. Set up the React frontend:
+3. Set up the frontend:
 
 ```bash
 cd webapp/video2txt
 npm install
+npm run dev
 ```
 
-3. Start the application:
+### Usage
 
-````bash
-On macOS/Linux
-./start.sh
-On Windows (run these in separate terminals)
-cd Python && python main.py
-cd webapp/video2txt && npm start```
-````
-
-## Usage
-
-1. Open the web interface (http://localhost:3000)
-2. Drag and drop video files or click to select files
-3. Click "Upload" to start the transcription process
-4. Monitor the progress in real-time
-5. Download the SRT file when processing is complete
+1. Open the web application (default: http://localhost:3001)
+2. Drag and drop video files or click to select
+3. Click the upload button to start transcription
+4. Monitor progress in real-time
+5. Edit transcriptions if needed (Real time update as you edit!)
+6. Download in your preferred format
 
 ## Project Structure
 
-- `/Python` - Backend Flask application
-  - `/utils` - Video processing and transcription logic
-  - `main.py` - Flask server
-- `/webapp/video2txt` - React frontend application
-  - `/src` - React components and logic
-  - `/public` - Static assets
+video2text/
+├── Python/ # Backend Flask application
+│ ├── utils/ # Video processing utilities
+│ └── main.py # Flask server
+└── webapp/video2txt/ # React frontend
+├── src/ # Source code
+│ ├── components/ # React components
+│ ├── scss/ # Styling
+│ └── utils/ # Helper functions
+└── public/ # Static assets
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit issues and pull requests.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## To be done
+
+- [ ] More animations
+- [ ] More languages support
+- [ ] Embed the caption in the video
+
+...feel free to suggest more!
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
-- Built with Flask and React
-- Uses OpenAI Whisper for speech recognition
-- MoviePy for video processing
-- FFmpeg for media handling
+- [OpenAI Whisper](https://github.com/openai/whisper) for speech recognition
+- [MoviePy](https://zulko.github.io/moviepy/) for video processing
+- [FFmpeg](https://ffmpeg.org/) for media handling
+- [React](https://reactjs.org/) and [Flask](https://flask.palletsprojects.com/) for the framework
+- [Bootstrap](https://getbootstrap.com/) for UI components
+
+## Author
+
+Holland Lee
+
+## Contact
+
+- GitHub: [@yourgithubusername](https://github.com/Holland-Ly)
+- Website: [your-website.com](https://www.hollandleehl.com)
